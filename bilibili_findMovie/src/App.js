@@ -74,11 +74,7 @@ export default class App extends Component {
                     {id:"56",name:"大会员",href:"#member"}
                 ]},
             ],
-            movies: [],
-            // loading: false,
-            // currentPage: 1,
-            // pageSize: 10,
-            // count: 0
+            movies: []
         }
     }
 
@@ -86,25 +82,6 @@ export default class App extends Component {
         const {data} = this.state
         this.setState({data:{...data,movies}})
     }
-
-    // UNSAFE_componentWillMount(){
-    //     this.getData();
-    // }
-
-    // getData = ()=>{
-    //     this.setState({data.loading:true})
-    //     axios.get('http://localhost:3000/movies').then(
-    //         response =>{
-    //             this.props.saveMovies(response.data);
-    //         },
-    //         error => {console.log('请求服务器失败',error);}
-    //     )
-    //     this.setState(prevState => {
-    //         count:response.data.length,
-    //         loading:false,
-    //         movies:[...prevState.]
-    //     })
-    // }
 
     render() {
         const {data} = this.state
